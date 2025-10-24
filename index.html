@@ -75,13 +75,6 @@
             </div>
         </div>
     </section>
-
-    <div class="popup className">
-  <div class="content">
-  [your popup's HTML here]
-  </div>
-  <button class="close">×</button>
-</div>
     
     <!-- Projects Section -->
     <section id="projects" class="projects">
@@ -92,7 +85,7 @@
                 <div class="card-content">
                     <h3>Portfolio Website</h3>
                     <p>A personal portfolio built with HTML, CSS, and animations.</p>
-                    <a href="#" class="project-btn">View Project</a>
+                    <a id="firstPopup" class="project-btn">View Project</a>
                 </div>
             </div>
             <div class="project-card">
@@ -100,7 +93,7 @@
                 <div class="card-content">
                     <h3>Landing Page</h3>
                     <p>A sleek and responsive landing page designed for startups.</p>
-                    <a href="#" class="project-btn">View Project</a>
+                    <a id="secondPopup" class="project-btn">View Project</a>
                 </div>
             </div>
             <div class="project-card">
@@ -108,7 +101,7 @@
                 <div class="card-content">
                     <h3>Business Website</h3>
                     <p>A full company website template made with HTML & CSS.</p>
-                    <a href="#" class="project-btn">View Project</a>
+                    <a id="thirdPopup" class="project-btn">View Project</a>
                 </div>
             </div>
         </div>
@@ -135,7 +128,7 @@
         <p>If you'd like to work together or just want to chat, feel free to reach out!</p>
         <a href="mailto:Obidoe@email.com" class="btn">Contact Me</a>
     </section>
-<button id="showPopup">Show Popup</button>
+
     <!-- Footer -->
     <footer>
         <div class="footer-links">
@@ -145,11 +138,33 @@
         <p>© 2025 Obi Doe | All Rights Reserved</p>
     </footer>
     <script>
-        document.getElementById('showPopup').addEventListener('click', () => {
-            Swal.fire('This is a simple popup!');
+        $(#firstPopup).on("click", () => {
+             Swal.fire({
+        title: 'Portfolio Website',
+        html: `
+            <div style="display: flex; align-items: center;">
+                <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=800" 
+                     alt="Project 1" 
+                     style="width: 150px; height: auto; margin-right: 20px; border-radius: 8px;">
+                <div>
+                    <h3>Portfolio Website</h3>
+                    <p>A personal portfolio built with HTML, CSS, and animations.</p>
+                </div>
+            </div>
+        `,
+        confirmButtonText: 'Close',
+        width: '500px', // Adjust width as needed
+        padding: '20px',
+        showCloseButton: true,
+        background: '#fff', // You can change the background color
+        customClass: {
+            popup: 'custom-popup-class' // Optional: add your own class for styling
+        }
+    });
         });
     </script>
 </body>
 </html>
+
 
 
