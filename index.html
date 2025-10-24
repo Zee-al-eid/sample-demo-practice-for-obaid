@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obi Doe | Web Developer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="popup.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -74,6 +76,13 @@
         </div>
     </section>
 
+    <div class="popup className">
+  <div class="content">
+  [your popup's HTML here]
+  </div>
+  <button class="close">×</button>
+</div>
+    
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <h2>My Projects</h2>
@@ -135,5 +144,7 @@
         </div>
         <p>© 2025 Obi Doe | All Rights Reserved</p>
     </footer>
+    <script>window.popup.register("className")</script>
 </body>
 </html>
+
