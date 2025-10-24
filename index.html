@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obi Doe | Web Developer</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="popup.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="popup.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -135,7 +135,7 @@
         <p>If you'd like to work together or just want to chat, feel free to reach out!</p>
         <a href="mailto:Obidoe@email.com" class="btn">Contact Me</a>
     </section>
-
+<button id="showPopup">Show Popup</button>
     <!-- Footer -->
     <footer>
         <div class="footer-links">
@@ -144,7 +144,12 @@
         </div>
         <p>© 2025 Obi Doe | All Rights Reserved</p>
     </footer>
-    <script>window.popup.register("className")</script>
+    <script>
+        document.getElementById('showPopup').addEventListener('click', () => {
+            Swal.fire('This is a simple popup!');
+        });
+    </script>
 </body>
 </html>
+
 
