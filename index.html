@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obi Doe | Web Developer</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <style>
+        a {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -33,49 +39,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-            I'm a web developer with a focus on creating seamless and interactive user experiences. 
-            I believe in minimalistic design and clean code to ensure web applications are intuitive and easy to use.
-        </p>
-        <p>
-            With a strong foundation in HTML, CSS, and JavaScript, I enjoy using the latest web technologies to build responsive, mobile-first websites.
-        </p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2>Skills & Technologies</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>HTML5</h3>
-                <div class="progress-bar">
-                    <div class="progress html"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>CSS3</h3>
-                <div class="progress-bar">
-                    <div class="progress css"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>JavaScript</h3>
-                <div class="progress-bar">
-                    <div class="progress js"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>React</h3>
-                <div class="progress-bar">
-                    <div class="progress react"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <h2>My Projects</h2>
@@ -107,65 +70,90 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <h2>What People Say</h2>
-        <div class="testimonial-cards">
-            <div class="testimonial-card">
-                <p>"Obi is an amazing developer who is committed to his craft. His attention to detail is unmatched."</p>
-                <p><strong>- Jane Doe</strong>, CEO of TechCorp</p>
-            </div>
-            <div class="testimonial-card">
-                <p>"I had the pleasure of working with Obi on several projects. He is highly skilled and an excellent communicator."</p>
-                <p><strong>- Mark Smith</strong>, Product Manager at WebWorks</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <p>If you'd like to work together or just want to chat, feel free to reach out!</p>
-        <a href="mailto:Obidoe@email.com" class="btn">Contact Me</a>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-        </div>
-        <p>© 2025 Obi Doe | All Rights Reserved</p>
-    </footer>
     <script>
+        // First Project Popup
         $('#firstPopup').on("click", () => {
-             Swal.fire({
-        title: 'Portfolio Website',
-        html: `
-            <div style="display: flex; align-items: center;">
-                <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=800" 
-                     alt="Project 1" 
-                     style="width: 150px; height: auto; margin-right: 20px; border-radius: 8px;">
-                <div>
-                    <h3>Portfolio Website</h3>
-                    <p>A personal portfolio built with HTML, CSS, and animations.</p>
-                </div>
-            </div>
-        `,
-        confirmButtonText: 'Close',
-        width: '500px', // Adjust width as needed
-        padding: '20px',
-        showCloseButton: true,
-        background: '#fff', // You can change the background color
-        customClass: {
-            popup: 'custom-popup-class' // Optional: add your own class for styling
-        }
-    });
+            Swal.fire({
+                title: 'Portfolio Website',
+                html: `
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=800" 
+                             alt="Project 1" 
+                             style="width: 150px; height: auto; margin-right: 20px; border-radius: 8px;">
+                        <div>
+                            <h3>Portfolio Website</h3>
+                            <p>A personal portfolio built with HTML, CSS, and animations to showcase my work. It features a responsive layout, smooth animations, and easy navigation to ensure users can experience my projects in an interactive and engaging way.</p>
+                            <ul>
+                                <li><strong>Technologies Used:</strong> HTML, CSS, JavaScript</li>
+                                <li><strong>Features:</strong> Responsive design, Smooth animations, Cross-browser compatibility</li>
+                                <li><strong>Goal:</strong> To create a modern and clean personal website that demonstrates my skills as a web developer.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `,
+                confirmButtonText: 'Close',
+                width: '600px',
+                padding: '20px',
+                showCloseButton: true,
+                background: '#fff'
+            });
+        });
+
+        // Second Project Popup
+        $('#secondPopup').on("click", () => {
+            Swal.fire({
+                title: 'Landing Page',
+                html: `
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800" 
+                             alt="Project 2" 
+                             style="width: 150px; height: auto; margin-right: 20px; border-radius: 8px;">
+                        <div>
+                            <h3>Landing Page</h3>
+                            <p>A sleek and responsive landing page designed for startups to introduce their product or service. This project emphasizes clean design principles, with clear call-to-action buttons and responsive layout for all devices.</p>
+                            <ul>
+                                <li><strong>Technologies Used:</strong> HTML, CSS, JavaScript</li>
+                                <li><strong>Features:</strong> Responsive layout, Minimalist design, Effective calls-to-action</li>
+                                <li><strong>Goal:</strong> To create a landing page that grabs attention and converts visitors into customers.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `,
+                confirmButtonText: 'Close',
+                width: '600px',
+                padding: '20px',
+                showCloseButton: true,
+                background: '#fff'
+            });
+        });
+
+        // Third Project Popup
+        $('#thirdPopup').on("click", () => {
+            Swal.fire({
+                title: 'Business Website',
+                html: `
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://plus.unsplash.com/premium_photo-1661772661721-b16346fe5b0f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470" 
+                             alt="Project 3" 
+                             style="width: 150px; height: auto; margin-right: 20px; border-radius: 8px;">
+                        <div>
+                            <h3>Business Website</h3>
+                            <p>A full company website template designed for businesses to establish an online presence. It features a modern and professional design with multiple sections including a homepage, about us, services, and contact page.</p>
+                            <ul>
+                                <li><strong>Technologies Used:</strong> HTML, CSS</li>
+                                <li><strong>Features:</strong> Clean layout, Professional design, Easy-to-use interface</li>
+                                <li><strong>Goal:</strong> To create a professional website that enhances a business's credibility and allows for customer engagement.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `,
+                confirmButtonText: 'Close',
+                width: '600px',
+                padding: '20px',
+                showCloseButton: true,
+                background: '#fff'
+            });
         });
     </script>
 </body>
 </html>
-
-
-
-
